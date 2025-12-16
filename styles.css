@@ -1,0 +1,156 @@
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("assets/scene.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: #e8dccb;
+}
+
+button {
+  all: unset;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  transform: scale(0.9);
+}
+
+.tree {
+  position: absolute;
+  bottom: -4%;
+  left: -3%;
+  z-index: 4;
+}
+
+.present-hover {
+  display: none;
+  pointer-events: none;
+}
+
+.present-wrapper {
+  bottom: -5%;
+  left: -3%;
+}
+
+.present-wrapper.green {
+  z-index: 5 !important;
+}
+
+.present-wrapper.blue {
+  z-index: 5 !important;
+}
+
+.present-wrapper.pink {
+  z-index: 6 !important;
+}
+
+.present-wrapper {
+  position: absolute;
+  pointer-events: none;
+}
+
+.window {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.fireplace {
+  position: absolute;
+  bottom: -13%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.couch {
+  position: absolute;
+  bottom: -25%;
+  left: 61%;
+  z-index: 3;
+}
+
+.cat {
+  position: absolute;
+  bottom: -5%;
+  left: 46%;
+  z-index: 4;
+}
+
+.present-hitbox {
+  position: absolute;
+  height: 17%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.present-hitbox.pink {
+  left: 55%;
+  bottom: 8px;
+  width: 17%;
+}
+
+.present-hitbox.green {
+  left: 32%;
+  bottom: 6%;
+  width: 25%;
+}
+
+.present-hitbox.blue {
+  left: 73%;
+  bottom: 7%;
+  width: 13%;
+}
+
+.green-present-content,
+.pink-present-content,
+.blue-present-content {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  max-width: 40%;
+  max-height: 40%;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.present-content-show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(120, 90, 60, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 40;
+}
+
+.overlay-show {
+  opacity: 1;
+  pointer-events: auto;
+}
