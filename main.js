@@ -19,15 +19,19 @@ document.querySelectorAll('.present-hitbox').forEach(hitbox => {
 
 const BASE_WIDTH = 1440;
 const BASE_HEIGHT = 900;
+const VISUAL_SCALE = 0.9; // tu decisión estética
 
 function scaleScene() {
-    const scaleX = window.innerWidth / BASE_WIDTH;
-    const scaleY = window.innerHeight / BASE_HEIGHT;
+  const scaleX = window.innerWidth / BASE_WIDTH;
+  const scaleY = window.innerHeight / BASE_HEIGHT;
 
-    const scale = Math.min(scaleX, scaleY);
+  const scale = Math.min(scaleX, scaleY) * VISUAL_SCALE;
 
-    document.querySelector('.scene').style.transform =
-        `scale(${scale - 0.15})`;
+  const scene = document.querySelector('.scene');
+  scene.style.transform = `
+    translate(-50%, -50%)
+    scale(${scale})
+  `;
 }
 
 window.addEventListener('resize', scaleScene);
