@@ -19,24 +19,21 @@ document.querySelectorAll('.present-hitbox').forEach(hitbox => {
 
 const BASE_WIDTH = 1440;
 const BASE_HEIGHT = 900;
-const VISUAL_SCALE = 0.9;
 
 function scaleScene() {
-  const scaleX = window.innerWidth / BASE_WIDTH;
-  const scaleY = window.innerHeight / BASE_HEIGHT;
-  const scale = Math.min(scaleX, scaleY);
+    const scaleX = window.innerWidth / BASE_WIDTH;
+    const scaleY = window.innerHeight / BASE_HEIGHT;
 
-  document.querySelector('.scene').style.transform =
-    `scale(${scale * VISUAL_SCALE})`;
+    const scale = Math.min(scaleX, scaleY);
+
+    document.querySelector('.scene').style.transform =
+        `scale(${scale - 0.15})`;
 }
 
 window.addEventListener('resize', scaleScene);
 scaleScene();
 
-
-
 // ---
-
 document.querySelectorAll('.present-hitbox').forEach(hitbox => {
   const wrapper = hitbox.closest('.present-wrapper');
   const visual = wrapper.querySelector('.present-visual');
