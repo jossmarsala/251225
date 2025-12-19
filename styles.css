@@ -39,8 +39,8 @@ button {
 
 .tree {
   position: absolute;
-  bottom: -15%;
-  left: 0%;
+  bottom: -6%;
+  left: -10%;
   z-index: 4;
 }
 
@@ -50,8 +50,8 @@ button {
 }
 
 .present-wrapper {
-  bottom: -5%;
-  left: -3%;
+  bottom: -6%;
+  left: -10%;
 }
 
 .present-wrapper.green {
@@ -73,7 +73,7 @@ button {
 
 .window {
   position: absolute;
-  top: -10%;
+  top: -30%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
